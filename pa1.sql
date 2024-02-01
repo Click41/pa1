@@ -16,3 +16,18 @@ CREATE TABLE Movies(
     FOREIGN KEY (m_id)
         REFERENCES Motion_Picture,
 )
+
+CREATE TABLE Genre (
+    u_id CHAR(),
+    description STRING,
+    PRIMARY KEY (u_id)
+)
+
+CREATE TABLE People (
+    p_id CHAR(),
+    name STRING,
+    nationality STRING,
+    date_of_birth DATE,
+    gender STRING,
+    PRIMARY KEY (p_id)
+)
