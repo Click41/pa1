@@ -17,6 +17,14 @@ CREATE TABLE Movies(
         REFERENCES Motion_Picture,
 )
 
+CREATE TABLE TV (
+    m_id CHAR(),
+    seasons INTEGER,
+    PRIMARY KEY (m_id),
+    FOREIGN KEY (m_id)
+        REFERENCES Motion_Picture,
+)
+
 CREATE TABLE Genre (
     u_id CHAR(),
     description STRING,
