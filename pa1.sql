@@ -40,10 +40,13 @@ CREATE TABLE People (
     PRIMARY KEY (p_id)
 )
 
-CREATE TABLE User (
-    u_id CHAR(),
+CREATE TABLE shooting_location (
     name STRING,
-    age INTEGER,
-    email STRING,
-    PRIMARY KEY (u_id)
+    city STRING,
+    country STRING,
+)
+
+CREATE TABLE awards (
+    name STRING,
+    year_received DATE,
 )
