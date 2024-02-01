@@ -39,3 +39,11 @@ CREATE TABLE People (
     gender STRING,
     PRIMARY KEY (p_id)
 )
+
+CREATE TABLE User (
+    u_id CHAR(),
+    name STRING,
+    age INTEGER,
+    email STRING,
+    PRIMARY KEY (u_id)
+)
