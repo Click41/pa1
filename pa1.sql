@@ -9,3 +9,10 @@ CREATE TABLE Motion_Picture (
     PRIMARY KEY (m_id)
 )
 
+CREATE TABLE Movies(
+    m_id CHAR(),
+    box_office STRING,
+    PRIMARY KEY (m_id),
+    FOREIGN KEY (m_id)
+        REFERENCES Motion_Picture,
+)
