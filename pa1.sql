@@ -51,10 +51,35 @@ CREATE TABLE Award (
     year_received DATE,
 )
 
-CREATE Table User (
+CREATE TABLE User (
     u_id CHAR(),
     email STRING,
     name STRING, 
     age INTEGER,
     PRIMARY KEY (u_id)
+)
+
+CREATE TABLE Role (
+    p_id CHAR(),
+    m_id CHAR(),
+    role_type VARCHAR NOT NULL,
+    PRIMARY KEY (m_id, p_id, role_type),
+    FOREIGN KEY (m_id) REFERENCES Motion_Picture,
+    FOREIGN KEY (p_id) REFERENCES People,
+)
+
+CREATE TABLE Likes (
+    u_id CHAR(),
+    m_id CHAR(),
+    PRIMARY KEY (u_id, m_id),
+    FOREIGN KEY (u_id) REFERENCES User,
+    FOREIGN KEY (m_id) REFERENCES Motion_Picture,
+)
+
+CREATE TABLE Belongs (
+    g_id CHAR(),
+    m_id CHAR(),
+    PRIMARY KEY (g_id, m_id)
+    FOREIGN KEY (g_id) REFERENCES Genre,
+    FOREIGN KEY (m_id) REFERENCES Motion_Picture,
 )
